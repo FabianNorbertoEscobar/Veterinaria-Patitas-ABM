@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VeterinariaPatitasMaestra.master.cs" Inherits="VeterinariaPatitas.VeterinariaPatitasMaestra" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta name="viewport" content="width=device-width user-scalable=no initial-scale=1.0 maximum-scale=1.0 minimum-scale=1.0" />
+    
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>--%>
+
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <title>Veterinaria "Patitas"</title>
+
+    <link rel="shortcut icon" type="imagenes/x-icon" href="images/favicon.jpg"/>
+
+    <asp:ContentPlaceHolder ID="CabeceraPaginaHija" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <br />
+            <div>
+                <img src="images/huellitas.png" title="Patitas" class="img-responsive img-rounded" width="100"/>
+            </div>
+            <div>
+                <asp:Label ID="lblFecha" runat="server" Text=" " CssClass="milabel text-capitalize"></asp:Label>
+            </div>
+            <div class="barra1">
+                <h2>ABM de Clientes</h2>
+            </div>
+            <div class="barra2 text-center">
+                <h1>VETERINARIA "PATITAS"</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="main row">
+
+        <form id="form1" runat="server">
+
+            <div class="container">
+                <asp:ContentPlaceHolder ID="ContenidoPaginaHija" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </form>
+
+    </section>
+
+    <div class="slider">
+                <ul>
+                    <li><img src="images/perro00.jpg" alt="" /></li>
+                    <li><img src="images/gato00.jpg" alt="" /></li>
+                    <li><img src="images/conejo00.jpg" alt="" /></li>
+                    <li><img src="images/perro01.jpg" alt="" /></li>
+                    <li><img src="images/gato01.jpg" alt="" /></li>
+                    <li><img src="images/hamster00.jpg" alt="" /></li>
+                    <li><img src="images/perro02.jpg" alt="" /></li>
+                    <li><img src="images/gato02.jpg" alt="" /></li>
+                    <li><img src="images/pajaro00.jpg" alt="" /></li>
+                    <li><img src="images/hamster01.jpg" alt="" /></li>
+                    <li><img src="images/conejo01.jpg" alt="" /></li>
+                    <li><img src="images/perro03.jpg" alt="" /></li>
+                    <li><img src="images/gato03.jpg" alt="" /></li>
+                    <li><img src="images/pajaro01.jpg" alt="" /></li>
+                    <li><img src="images/conejo02.jpg" alt="" /></li>
+                    <li><img src="images/perro04.jpg" alt="" /></li>
+                    <li><img src="images/gato04.jpg" alt="" /></li>
+                    <li><img src="images/hamster02.jpg" alt="" /></li>
+                    <li><img src="images/pajaro02.jpg" alt="" /></li>
+                    <li><img src="images/iguana00.jpg" alt="" /></li>
+                    <li><img src="images/tortuga01.jpg" alt="" /></li>
+                    <li><img src="images/cerdo02.jpg" alt="" /></li>
+                </ul>
+            </div>
+
+    <footer>
+        <div class="container text-center pie">
+            <p>VETERINARIA "PATITAS" - ABM de Clientes - Buenos Aires, Argentina - <small>Correo electrónico: veterinariapatitas@gmail.com</small></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
