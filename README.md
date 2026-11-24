@@ -1,122 +1,83 @@
-# Veterinaria-Patitas-ABM
-Veterinaria Patitas ABM. Aplicación Web en C#.NET con ASP.NET. PowerShell. HTML. XML. CSS. JavaScript. Entity Framework. Bootstrap. JQuery. MSSQL. Responsive Design. Trabajo Práctico del Curso de Desarrollo Eb en .NET, Polo Tecnológico. UNLaM.
- Universidad Nacional de la Matanza - DIIT
-Polo Tecnológico 2017
-Desarrollo de Aplicaciones Web en .NET
-UNLaM - Polo Tecnológico
-Trabajo Práctico
-1. Objetivo
-Este documento describe el alcance funcional y los requisitos técnicos del trabajo práctico que
-los alumnos del curso de Desarrollo de Aplicaciones Web en .NET del Polo Tecnológico.
-2. Equipo
-El equipo para realizar el trabajo práctico deberá ser de 4 alumnos, sin excepciones.
-3. Requisitos Técnicos
-3.1 Proyecto .NET
-1. El trabajo práctico deberá ser realizado utilizando ASP.NET. El tipo de proyecto a
-utilizar es una aplicación web.
-3.2 Estilos
-1. No se permitirán que se utilicen los estilos ya provistos por Microsoft en la aplicación de
-ejemplo que provee Visual Studio.
-1
-Universidad Nacional de la Matanza - DIIT
-Polo Tecnológico 2017
-2. Todos los archivos .css deberán estar dentro de una carpeta.
-3. No utilizar estilos inline (atributo style=””) ni definir estilos dentro de una pagina (tags
-<style>).
-4. Debe de utilizarse algún framework/biblioteca de hojas de estilo. Algunos ejemplos:
-a. Twitter Bootstrap ( http://getbootstrap.com/ , temas http://bootswatch.com/ ).
-Video curso introductorio sugerido (no oficial) https://youtu.be/nug1pMke-y4
-b. Foundation ( http://foundation.zurb.com/docs/ )
-3.3 JavaScript
-1. No será necesario utilizar JavaScript para ninguna de las funcionalidades requeridas en
-el trabajo práctico.
-3.4 HTML
-1. No utilizar tags table para organizar el contenido de una página en columnas, los tags
-table solo están permitidos para representar una grilla/listado de información.
-2. Se requiere el uso de master page para estructura los formularios web de la aplicación.
-Dentro de la master page deberán referenciarse las hojas de estilo.
-3.5 Validación
-1. Utilizar validaciones tanto del lado del cliente (JavaScript) como del lado del servidor
-utilizando sólo controles ASP.NET. No es necesario utilizar javascript nativo o cualquier
-otro framework que permite realizar validaciones del lado cliente.
-2. Se puede utilizar una lista que detalle todos los campos que no cumplieron con las
-validaciones.
-3.6 Arquitectura y Consideraciones de Desarrollo
-1. La capa de acceso a datos deberá ser realizada con Entity Framework Este componente
-de .NET será explicado en clases a fin de que los alumnos comprendan cómo utilizarlo.
-2. Utilizar la menor cantidad posible de código en los archivos aspx.cs, ascx.cs, master.cs,
-etc. e intentar que en los mismos haya llamadas a métodos dentro de otro proyecto que
-contenga las reglas de negocio.
-2
-Universidad Nacional de la Matanza - DIIT
-Polo Tecnológico 2017
-4. Objetivo del trabajo
-El objetivo del trabajo consiste en el desarrollo de las pantallas de ABM (Alta/Baja/Modificación)
-y de listado de una entidad a elección del alumno.
-El alumno podrá elegir cualquier entidad que desee cumpliendo las siguientes condiciones
-dentro de la aplicación web:
-1. la entidad debe contener al menos 5 campos descriptivos.
-a. un campo debe ser un booleano .
-b. un campo debe ser numérico .
-c. al menos un campo debe ser alfanumérico (tipo de dato en SQL Server
-nvarchar).
-2. se debe almacenar fecha de carga .
-3. se debe registrar la fecha de modificación .
-4. los siguientes controles deben ser utilizados: asp:TextBox, asp:Label,
-asp:DropDownList. asp:GridView
-5. uno de los campos debe contener la integridad referencial con otra entidad dependiente
-(ejemplo: si es un ABM de Libros, debería existir una tabla Libro y por ejemplo esta tabla
-tener un campo FK IdGenero que referencie a una tabla Genero, y en la pantalla de
-creación/modificación existiría un combo con valores “Ciencia Ficción”, “Policial”,
-“Suspenso” y esos valores proviniendo de esa tabla). El control DropDownList se debe
-utilizar en este caso.
-6. se debe aplicar las validaciones necesarias:
-a. todos los campos son requeridos
-b. se debe aplicar una validación de comparación
-c. se debe aplicar una validación de expresión regular .
-d. se debe aplicar una validación de mayor o menor .
-Flujo de la aplicación
-La aplicación deberá iniciar en la pantalla de listado. Esta pantalla contiene todos los registros
-existentes en la base de datos. En caso de que no haya, se debe mostrar un mensaje que
-indique que no hay datos .
-Debe existir un boton (asp:Button) que permite ir a la pantalla para carga de nuevos registros.
-Las opciones de modificar y eliminar deben estar dentro de la grilla que contiene el listado y
-deben aparecer por cada ítem dentro del mismo.
-3
-Universidad Nacional de la Matanza - DIIT
-Polo Tecnológico 2017
-No se deberá visualizar dentro de los campos la clave primaria de cada registro de la base de
-datos.
-Funcionalidad Bonus
-Para aquellos alumnos que deseen sumar puntos adicionales a la entrega del trabajo práctico
-deben agrega una funcionalidad de búsqueda en la pantalla de listado. A través de un
-asp:TextBox deberán realizar un filtrado del resultado a mostrar según el texto ingreso. El filtro
-debe ser aplicado sobre un sólo campo de la entidad.
-5. Forma de Entrega
-El TP deberá ser enviado a los siguientes destinatarios, copiando a todos los integrantes del
-equipo en el email enviado.
-● mpazwasiuchnik@unlam.edu.ar ; pablokuko@gmail.com ; pnsanchez@unlam.edu.ar ;
-● el resto de los integrantes que participaron del tp (como CC)
-El email deberá contener los siguientes puntos:
-a. El título del email será POLO-2017-TP-[Integrantes]
-b. Respuestas a las siguientes preguntas:
-i. ¿Qué nota creen que deberían sacar en el TP? (1-10, donde para 7 debe estar
-toda la funcionalidad pedida) y ¿por qué?
-ii. ¿Qué cosas creen que podrían mejorarse?
-iii. ¿Qué les resultó más complicado?
-c. Un Archivo [Grupo-integrante1-integrate2-etc].zip con toda la solución para que pueda
-ser compilada y ejecutada en cualquier computadora. Cambiarle la extension al zip y
-que sea [Grupo-integrante1-integrate2-etc].txt, porque puede que el mail rebote
-por seguridad.
-6. Condiciones de Aprobación
-1. El TP deberá cumplir con todos los requisitos técnicos y funcionales definidos. No se
-aceptará que alguna funcionalidad o requisito técnicos no se encuentren plasmados en
-el trabajo práctico.
-4
-Universidad Nacional de la Matanza - DIIT
-Polo Tecnológico 2017
-2. Al momento de la entrega del trabajo práctico, todos los alumnos de cada equipo
-deberán estar presentes para la defensa del trabajo práctico.
-3. En la defensa del trabajo, se evaluará el grado de conocimiento y participación en el
-desarrollo del trabajo práctico de cada alumno.
-5
+# Veterinaria Patitas
+
+Aplicación web de prácticas para administrar clientes de una veterinaria y sus mascotas. El proyecto implementa operaciones ABM (alta, baja y modificación), listados y filtros, y fue realizado como trabajo práctico del curso **Desarrollo de Aplicaciones Web en .NET** del Polo Tecnológico de la Universidad Nacional de La Matanza (2017).
+
+> Es un proyecto académico basado en tecnologías de Microsoft de esa época. No está pensado como una solución lista para producción ni utiliza una arquitectura moderna de .NET.
+
+## Funcionalidades
+
+- Listado de clientes y mascotas en grillas independientes, con sus datos relacionados.
+- Alta de un cliente y su mascota asociada desde un único formulario.
+- Modificación y baja de clientes, con una pantalla de confirmación antes de aplicar los cambios.
+- Búsqueda por prefijo: clientes por nombre o apellido, y mascotas por nombre o raza.
+- Conteo de resultados y opción para quitar los filtros.
+- Selección de provincia, tipo de mascota y tamaño desde listas cargadas con datos de la base.
+- Validaciones de campos obligatorios, formatos (por ejemplo, DNI y correo electrónico) y rangos numéricos mediante controles de validación de ASP.NET.
+- Diseño compartido entre páginas, estilos con Bootstrap y contenido visual relacionado con la veterinaria.
+
+## Stack tecnológico
+
+| Área | Tecnología |
+| --- | --- |
+| Aplicación web | ASP.NET Web Forms, C# y .NET Framework 4.5 |
+| Persistencia | Entity Framework 6, modelo EDMX y consultas LINQ |
+| Base de datos | Microsoft SQL Server |
+| Interfaz | HTML, CSS, Bootstrap y JavaScript |
+| Bibliotecas de interfaz | jQuery 3.1.1 y Bootstrap (archivos locales) |
+| Ejecución local | Visual Studio e IIS Express |
+
+El modelo Entity Framework es de tipo **Database First**: `VeterinariaPatitas.edmx` describe el modelo y los archivos `.tt` generan las clases de entidades y el contexto. La conexión configurada se llama `Contexto`.
+
+## Modelo de datos
+
+- **Cliente** almacena datos de contacto, estado y fechas de carga y modificación.
+- **Mascota** se asocia a un cliente y registra nombre, raza, edad, sexo, tipo y tamaño.
+- **Provincia**, **Tipo** y **Tamanio** proveen los valores de referencia de las listas desplegables.
+
+Las relaciones y claves foráneas están definidas en el modelo EDMX y en el script SQL incluido. La aplicación registra los datos del cliente y su mascota desde el mismo formulario.
+
+## Estructura del repositorio
+
+```text
+.
+├── README.md
+├── 2017.Polo.TP.pdf                 # Enunciado original del trabajo práctico
+└── VeterinariaPatitas/
+    ├── VeterinariaPatitas.sln       # Solución de Visual Studio
+    └── VeterinariaPatitas/
+        ├── PáginaPrincipal.aspx     # Listados y filtros
+        ├── Formulario.aspx          # Alta y modificación
+        ├── Confirmación.aspx        # Confirmación y persistencia de cambios
+        ├── VeterinariaPatitasMaestra.Master
+        ├── VeterinariaPatitas.edmx  # Modelo Entity Framework
+        ├── css/                     # Bootstrap y estilos del sitio
+        ├── js/                      # jQuery y Bootstrap
+        ├── images/                  # Imágenes de la interfaz
+        ├── queries/query.sql        # Datos de referencia de ejemplo
+        └── buckup de la BD/         # Archivos MDF/LDF y script de la base
+```
+
+## Requisitos para ejecutarlo
+
+- Windows con Visual Studio compatible con proyectos ASP.NET Web Forms y el **targeting pack de .NET Framework 4.5**.
+- IIS Express (incluido habitualmente con Visual Studio).
+- Microsoft SQL Server y SQL Server Management Studio para preparar la base.
+
+### Puesta en marcha
+
+1. Abra `VeterinariaPatitas/VeterinariaPatitas.sln` en Visual Studio y restaure los paquetes NuGet si Visual Studio lo solicita. Entity Framework 6 está declarado en `packages.config`.
+2. Prepare una base de datos llamada `VeterinariaPatitas` en la instancia local de SQL Server. Puede adjuntar `VeterinariaPatitas/VeterinariaPatitas/buckup de la BD/VeterinariaPatitas.mdf` (junto con su archivo de log), o ejecutar el script `script buckup de la BD VeterinariaPatitas.sql` de esa misma carpeta desde SQL Server Management Studio. Si ejecuta el script, revise y adapte las rutas de archivos que contiene a su instalación.
+3. Si la instancia, el nombre de la base o el método de autenticación son distintos, actualice la cadena `Contexto` en `VeterinariaPatitas/VeterinariaPatitas/Web.config`. La configuración incluida apunta a `(local)`, a la base `VeterinariaPatitas` y usa autenticación integrada de Windows.
+4. Configure la solución para iniciar la aplicación web y ejecute con IIS Express. La pantalla de inicio funcional es `PáginaPrincipal.aspx`.
+
+La carpeta `queries` contiene sentencias para cargar datos de referencia y ejemplos adicionales; ejecútelas solo si esos registros no existen ya en la base. El script de base también contiene datos de ejemplo. No ejecute ambos conjuntos de inserciones repetidamente, ya que pueden duplicar registros.
+
+## Prácticas y alcance
+
+El trabajo aplica conceptos introductorios de desarrollo web con .NET: páginas Web Forms con code-behind, una Master Page compartida, controles de servidor (`GridView`, `DropDownList`, `TextBox` y validadores), relaciones entre entidades, acceso a datos con Entity Framework y hojas de estilo externas organizadas en una carpeta.
+
+La lógica de las operaciones está principalmente en los code-behind de las páginas; no hay una capa de negocio independiente. Para mantener el proyecto como material de práctica, se conservan el modelo y las dependencias originales. La separación de responsabilidades, la actualización de dependencias, la configuración por entorno y la cobertura automatizada serían posibles mejoras para una evolución futura.
+
+## Licencia y material académico
+
+El repositorio incluye el enunciado `2017.Polo.TP.pdf` como referencia del curso. No se especifica una licencia de software en el proyecto.
